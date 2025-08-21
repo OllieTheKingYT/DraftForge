@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DraftForge</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>DraftForge</h1>
+  <textarea id="editor" placeholder="Start writing..."></textarea>
+  <br>
+  <input type="text" id="filename" placeholder="Enter filenmae, must have .txt or .docx.">
+  <button onclick="saveDraft()">Save Draft</button>
+
+  <!-- Dependencies -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+  <script src="https://unpkg.com/docx@7.1.0/build/index.js"></script>
+
+  <!-- App Logic -->
+  <script src="app.js"></script>
+</body>
+</html>
