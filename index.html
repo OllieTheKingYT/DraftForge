@@ -3,18 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <title>DraftForge</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
   <h1>DraftForge</h1>
-  <textarea id="editor" placeholder="Start writing..."></textarea>
+
+  <!-- Scroll Editor -->
+  <textarea id="editor" placeholder="Start writing your scroll..."></textarea>
   <br>
-  <input type="text" id="filename" placeholder="Enter filenmae, must have .txt or .docx.">
+
+  <!-- Export Format Dropdown -->
+  <label for="filetype">Choose export format:</label>
+  <select id="filetype">
+    <option value=".codex">.codex (Founder scroll)</option>
+    <option value=".txt">.txt (Plain text)</option>
+    <option value=".docx">.docx (Styled document)</option>
+    <option value=".md">.md (Markdown)</option>
+    <option value=".html">.html (Web lore)</option>
+    <option value=".json">.json (Structured data)</option>
+    <option value=".pdf">.pdf (Ceremonial scroll)</option>
+  </select>
+  <br>
+
+  <!-- Filename Input -->
+  <input type="text" id="filename" placeholder="Enter filename (no extension needed)">
   <button onclick="saveDraft()">Save Draft</button>
 
   <!-- Dependencies -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
   <script src="https://unpkg.com/docx@7.1.0/build/index.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
   <!-- App Logic -->
   <script src="app.js"></script>
